@@ -1,3 +1,4 @@
+# Bu fonksiyon encoding işlemini gerçekleştirir.
 def rle_encode(veri):
     if not veri:
         return ""
@@ -14,6 +15,7 @@ def rle_encode(veri):
         encoded += f"{char}{count}"
     return encoded
 
+# Bu fonksiyon decoding işlemini gerçekleştirir. Sıkıştırılmış metni çözer.
 def rle_decode(compressed):
     decoded = ""
     i = 0
@@ -28,6 +30,7 @@ def rle_decode(compressed):
         i += 2 # İkişer ikişer atla
     return decoded
 
+# Bu fonksiyon sıkıştırma oranını hesaplar.
 def oran_hesapla(origin, compressed):
     if len(origin) == 0: return 0
     oran = (1 - len(compressed) / len(origin)) * 100
@@ -59,5 +62,6 @@ def main():
         else:
             print("[!] HATA: Veri bozuldu!")
 
+# Program çalıştırıldığında çalışacak olan main fonksiyon.
 if __name__ == "__main__":
     main()
