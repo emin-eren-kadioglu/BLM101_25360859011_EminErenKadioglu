@@ -13,24 +13,24 @@ Bu proje, **Bilgisayar Mühendisliği** bölümü kapsamında **Veri Depolama ve
 
 ## 🎥 Proje Sunumu
 
-Projenin çalışma mantığını ve örnek senaryoları anlattığım sunum videosuna aşağıdaki bağlantıdan ulaşabilirsiniz:
+Projenin çalışma mantığını ve örnek senaryoları anlattığım sunum videosuna aşağıdaki görsel üzerinden ulaşabilirsiniz:
 
-[![YouTube Sunum](https://img.youtube.com/vi/jam64MG-Lmw/0.jpg)](https://www.youtube.com/watch?v=jam64MG-Lmw)
-> *Linke tıklayarak videoyu izleyebilirsiniz.*
-[Link](https://www.youtube.com/watch?v=jam64MG-Lmw)
+[![YouTube Sunum Videosu](https://img.youtube.com/vi/jam64MG-Lmw/maxresdefault.jpg)](https://www.youtube.com/watch?v=jam64MG-Lmw)
+
+> 💡 **İpucu:** Videoyu izlemek için yukarıdaki görsele tıklayın veya [buraya tıklayarak](https://www.youtube.com/watch?v=jam64MG-Lmw) doğrudan YouTube üzerinden açın.
 
 ---
 
 ## 📖 Proje Konusu ve Kapsam
 
-**Atanan Konu:** Veri Depolama ve Sıkıştırma Algoritmaları (Run-Length Encoding)
+**Atanan Konu:** Veri Depolama ve Sıkıştırma Algoritmaları (Run-Length Encoding)  
 **Referans:** Chapter 1 (1.4 Representing Information, 1.9 Data Compression)
 
 Bu proje, veri sıkıştırmanın temel mantıklarından biri olan **RLE (Run-Length Encoding)** algoritmasını simüle eder. RLE, özellikle ardışık tekrarlayan verilerin (örneğin siyah-beyaz bitmap görseller veya tekrarlı log dosyaları) sıkıştırılmasında etkilidir.
 
 ### ⚙️ Çalışma Mantığı
 
-Algoritma, veri kaybı olmadan (lossless) sıkıştırma yapar. Temel prensip şudur:
+Algoritma, veri kaybı olmadan (lossless) sıkıştırma yapar. Temel prensip şudur:  
 `Veri` -> `Karakter` + `Tekrar Sayısı`
 
 Ancak bu projedeki kodda, **decode (çözme) işleminin hatasız ve basit olması için** özel bir strateji izlenmiştir:
@@ -53,24 +53,23 @@ Proje tek bir Python dosyası (`main.py`) içerisinde 3 ana fonksiyon ve bir ana
 Verilen ham metni (raw data) tarar.
 * Karakterleri sırayla okur ve ardışık tekrar sayılarını tutar.
 * **Kritik Mantık:** Sayaç 9'a ulaştığında veya karakter değiştiğinde saymayı durdurur ve `Karakter + Sayı` çiftini sonuca ekler.
-* Bu yöntem, sıkıştırılmış verinin sabit bir formatta (Char-Digit-Char-Digit...) kalmasını sağlar.
+* Bu yöntem, sıkıştırılmış verinin sabit bir formatta (`Char-Digit-Char-Digit...`) kalmasını sağlar.
 
 ### 2. `rle_decode(compressed)`
 Sıkıştırılmış veriyi orijinal haline döndürür.
 * Veriyi ikişerli adımlarla (step=2) okur.
 * Çift indeksler (`0, 2, 4...`) karakteri, tek indeksler (`1, 3, 5...`) tekrar sayısını temsil eder.
-* Örneğin `A5` okunduğunda, 5 adet `A` üretir.
 
 ### 3. `oran_hesapla(origin, compressed)`
 Sıkıştırma verimliliğini yüzdesel olarak hesaplar.
-* Formül: `(1 - (Sıkıştırılmış Boyut / Orijinal Boyut)) * 100`
-* Pozitif sonuç verinin küçüldüğünü, negatif sonuç ise verinin büyüdüğünü (sıkıştırmanın başarısız olduğunu) gösterir. RLE, çok değişkenli metinlerde negatif sonuç verebilir.
+* **Formül:** `(1 - (Sıkıştırılmış Boyut / Orijinal Boyut)) * 100`
+* Pozitif sonuç verinin küçüldüğünü, negatif sonuç ise verinin büyüdüğünü gösterir.
 
 ---
 
 ## 🚀 Kurulum ve Çalıştırma
 
-Bu projeyi çalıştırmak için bilgisayarınızda **Python 3.x** yüklü olmalıdır. Ekstra bir kütüphane kurulumuna (pip install vb.) gerek yoktur.
+Bu projeyi çalıştırmak için bilgisayarınızda **Python 3.x** yüklü olmalıdır.
 
 1.  **Repoyu Klonlayın:**
     ```bash
@@ -82,7 +81,6 @@ Bu projeyi çalıştırmak için bilgisayarınızda **Python 3.x** yüklü olmal
     ```bash
     python main.py
     ```
-    *(Mac/Linux kullanıcıları için `python3 main.py`)*
 
 3.  **Kullanım:**
     * Program açıldığında sıkıştırmak istediğiniz veriyi girin.
@@ -92,18 +90,16 @@ Bu projeyi çalıştırmak için bilgisayarınızda **Python 3.x** yüklü olmal
 
 ## 🧪 Test Senaryoları
 
-Aşağıda kodun farklı girdilere verdiği tepkiler gösterilmiştir:
-
 | Senaryo | Girdi (Input) | Çıktı (Encoded) | Oran | Durum |
 | :--- | :--- | :--- | :--- | :--- |
 | **Başarılı Sıkıştırma** | `AAAAABBBCC` | `A5B3C2` | **%40.0** | ✅ Verimli |
-| **Tekil Karakterler** | `ABCDE` | `A1B1C1D1E1` | **-%100.0** | ❌ Verimsiz (Boyut arttı) |
-| **9'dan Fazla Tekrar** | `AAAAAAAAAAAA` (12 adet) | `A9A3` | **%66.67** | ✅ Parçalı Kodlama |
+| **Tekil Karakterler** | `ABCDE` | `A1B1C1D1E1` | **-%100.0** | ❌ Verimsiz |
+| **9'dan Fazla Tekrar** | `AAAAAAAAAAAA` | `A9A3` | **%66.67** | ✅ Parçalı |
 | **Karışık Veri** | `AAABBC` | `A3B2C1` | **%0.0** | ⚠️ Nötr |
 
 ---
 
 ## ⚠️ Önemli Notlar
 
-* Bu algoritma, ardışık tekrarların **olmadığı** metinlerde (örneğin normal bir cümle) dosya boyutunu küçültmek yerine **artırır**. Bu, RLE algoritmasının doğal bir sonucudur.
-* Proje, sadece ASCII karakterleri ve basit metinleri desteklemek üzere tasarlanmıştır.
+* Bu algoritma, ardışık tekrarların **olmadığı** metinlerde dosya boyutunu **artırır**. Bu, RLE algoritmasının doğası gereğidir.
+* Proje, ASCII karakterleri ve basit metinleri desteklemek üzere optimize edilmiştir.
