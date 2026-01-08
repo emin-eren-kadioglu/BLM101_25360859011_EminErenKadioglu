@@ -6,16 +6,16 @@ Bu proje, **Bilgisayar Mühendisliği** bölümü kapsamında **Veri Depolama ve
 
 | Alan | Bilgi |
 | :--- | :--- |
-| **Ad Soyad** | [Adınız Soyadınız] |
-| **Öğrenci No** | [Numaranız] |
+| **Ad Soyad** | Emin Eren KADIOĞLU |
+| **Öğrenci No** | 25360859011 |
 | **Bölüm** | Bilgisayar Mühendisliği |
-| **Ders/Grup** | 2. Grup: Veri Depolama ve Sıkıştırma Algoritmaları |
+| **Ders/Grup** | 1. Grup: Veri Depolama ve Sıkıştırma Algoritmaları |
 
 ## 🎥 Proje Sunumu
 
 Projenin çalışma mantığını ve örnek senaryoları anlattığım sunum videosuna aşağıdaki bağlantıdan ulaşabilirsiniz:
 
-[![YouTube Sunum](https://img.youtube.com/vi/VIDEO_ID_BURAYA/0.jpg)](https://www.youtube.com/watch?v=VIDEO_LINKINI_BURAYA_YAPISTIR)
+[![YouTube Sunum](https://img.youtube.com/vi/jam64MG-Lmw/0.jpg)]([https://www.youtube.com/watch?v=VIDEO_LINKINI_BURAYA_YAPISTIR](https://www.youtube.com/watch?v=jam64MG-Lmw))
 > *Linke tıklayarak videoyu izleyebilirsiniz.*
 
 ---
@@ -73,8 +73,8 @@ Bu projeyi çalıştırmak için bilgisayarınızda **Python 3.x** yüklü olmal
 
 1.  **Repoyu Klonlayın:**
     ```bash
-    git clone [https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ.git](https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ.git)
-    cd REPO_ADINIZ
+    git clone [https://github.com/emin-eren-kadioglu/BLM101_25360859011_EminErenKadioglu.git](https://github.com/emin-eren-kadioglu/BLM101_25360859011_EminErenKadioglu.git)
+    cd BLM101_25360859011_EminErenKadioglu
     ```
 
 2.  **Uygulamayı Çalıştırın:**
