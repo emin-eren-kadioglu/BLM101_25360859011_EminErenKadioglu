@@ -15,7 +15,7 @@ Bu proje, **Bilgisayar Mühendisliği** bölümü kapsamında **Veri Depolama ve
 
 Projenin çalışma mantığını ve örnek senaryoları anlattığım sunum videosuna aşağıdaki bağlantıdan ulaşabilirsiniz:
 
-[![YouTube Sunum](https://img.youtube.com/vi/jam64MG-Lmw/0.jpg)]([https://www.youtube.com/watch?v=VIDEO_LINKINI_BURAYA_YAPISTIR](https://www.youtube.com/watch?v=jam64MG-Lmw))
+[![YouTube Sunum](https://img.youtube.com/vi/jam64MG-Lmw/0.jpg)]([https://www.youtube.com/watch?v=jam64MG-Lmw](https://www.youtube.com/watch?v=jam64MG-Lmw))
 > *Linke tıklayarak videoyu izleyebilirsiniz.*
 
 ---
