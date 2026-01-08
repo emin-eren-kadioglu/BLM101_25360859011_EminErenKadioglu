@@ -9,7 +9,7 @@ Bu proje, **Bilgisayar Mühendisliği** bölümü kapsamında **Veri Depolama ve
 | **Ad Soyad** | Emin Eren KADIOĞLU |
 | **Öğrenci No** | 25360859011 |
 | **Bölüm** | Bilgisayar Mühendisliği |
-| **Ders/Grup** | 1. Grup: Veri Depolama ve Sıkıştırma Algoritmaları |
+| **Ders/Grup** | 2. Grup: Veri Depolama ve Sıkıştırma Algoritmaları |
 
 ## 🎥 Proje Sunumu
 
