@@ -73,7 +73,7 @@ Bu projeyi çalıştırmak için bilgisayarınızda **Python 3.x** yüklü olmal
 
 1.  **Repoyu Klonlayın:**
     ```bash
-    git clone [https://github.com/emin-eren-kadioglu/BLM101_25360859011_EminErenKadioglu.git](https://github.com/emin-eren-kadioglu/BLM101_25360859011_EminErenKadioglu.git)
+    git clone https://github.com/emin-eren-kadioglu/BLM101_25360859011_EminErenKadioglu.git
     cd BLM101_25360859011_EminErenKadioglu
     ```
 
